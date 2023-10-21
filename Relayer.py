@@ -11,7 +11,6 @@ RELAY_DIR = 'relayed_files'
 # Created a global variable for the destination IP.
 destination_ip = ""
 
-
 # Create directory for relaying files if it does not exist.
 if not os.path.exists(RELAY_DIR):
     os.makedirs(RELAY_DIR)
@@ -34,7 +33,7 @@ def relay():
     file.save(filename)
 
     # Pass it to the sender method to complete the relay
-    Sender.upload_file(filename,destination_ip)
+    return Sender.upload_file(filename, destination_ip)
 
 
 if __name__ == '__main__':

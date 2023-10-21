@@ -10,8 +10,8 @@ def main():
     Printer.print_menu(options)
     user_choice = Printer.prompt_for_int('Your Mode Selection: ')
     if user_choice == 1:
-        destination_ip = Printer.prompt_for_input("Enter HOST IP of RECEIVER")
-        start_relayer(destination_ip)
+        destination_ip = Printer.prompt_for_input("Enter HOST IP of RECEIVER: ")
+        start_relayer("http://" + destination_ip + ":5001/receive")
     if user_choice == 2:
         start_receiver()
     elif user_choice == 3:

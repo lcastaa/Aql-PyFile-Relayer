@@ -12,6 +12,6 @@ def upload_file(file_to_send, host_ip):
 
     # Check the response from the server
     if response.status_code == 200:
-        print('File sent successfully')
+        return {"MSG": "File sent PASSED"}
     else:
-        print('Failed to send the file')
+        return {"MSG": "File sent FAILED"}
